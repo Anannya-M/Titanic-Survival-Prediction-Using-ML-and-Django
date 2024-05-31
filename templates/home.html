@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titanic Survival Prediction</title>
+    <link rel="stylesheet" href="static/home.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Titanic Survival Prediction</h1>
+        </header>
+        <section class="content">
+            <h2 class="subtitle">Analyzing the Titanic Tragedy</h2>
+            <p class="description">Explored the data and insights from the tragic sinking of The Titanic. Discovered patterns and trends that determined the survival rates of passengers.</p>
+            <form action="{% url 'index' %}">
+              <button type='submit' class="explore-btn">Explore Now</button>
+            </form>
+
+        </section>
+    </div>
+    <script src="static/home.js"></script>
+</body>
+</html>

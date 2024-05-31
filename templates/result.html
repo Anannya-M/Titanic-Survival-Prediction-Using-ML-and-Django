@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Predictions</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'result.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Results!!!</h1>
+        <a class="home-link" href="{% url 'home' %}">Home</a>
+        <div class="result-container">
+
+            <div class="result-text">
+                <p class="result-label">Result is:</p>
+                {% if prediction == 'Survived' %}
+                    <p class="prediction survived">The person survived!!! &#128522 </p>
+                {% else %}
+                    <p class="prediction not-survived"> Unfortunately, the person did not survive. &#128542  </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

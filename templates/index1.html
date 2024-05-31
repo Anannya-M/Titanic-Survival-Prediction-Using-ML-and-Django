@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Titanic Survival Predictor</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Titanic Survival Predictor</h1>
+        <p class="para">Enter the details of a person on the Titanic voyage and we will predict whether they survive or not.</p>
+        <div class="form">
+            <form class="" action="{% url 'result' %}">
+                {% csrf_token %}
+                <input type="text" name="Pclass" placeholder="Passenger Class">
+                <input type="text" name="Sex" placeholder="Sex">
+                <input type="text" name="Age" placeholder="Age">
+                <input type="text" name="SibSp" placeholder="Siblings/Spouses Aboard">
+                <input type="text" name="Parch" placeholder="Parents/Children Aboard">
+                <input type="text" name="Fare" placeholder="Fare">
+                <input type="text" name="Embarked" placeholder="Embarked">
+                <input type="text" name="Title" placeholder="Title">
+                <input type="submit" value="Predict">
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

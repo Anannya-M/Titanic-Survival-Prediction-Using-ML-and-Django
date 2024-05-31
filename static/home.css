@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+
+}
+
+.header .title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease-out;
+}
+
+.content .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    animation: slideIn 1.5s ease-out;
+}
+
+.content .description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.explore-btn {
+    background-color: #4ca1af;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: bounce 2s infinite;
+}
+
+.explore-btn:hover {
+    background-color: #357a83;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
